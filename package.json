@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "dgram": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "fft-js": "^0.0.12",
+    "fs": "^0.0.1-security",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "readline": "^1.3.0",
+    "stream": "^0.0.3"
+  },
+  "name": "wled-audiosync",
+  "version": "1.0.0",
+  "description": "The simplest solution to sync Linux audio to a WLED device. Up and running in less than 5 seconds.",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvidPiDev/WLED-AudioSync.git"
+  },
+  "author": "DvidPi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DvidPiDev/WLED-AudioSync/issues"
+  },
+  "homepage": "https://github.com/DvidPiDev/WLED-AudioSync#readme",
+  "bin": "script.js",
+  "pkg": {
+    "targets": ["node18-linux-x64"],
+    "assets": [
+      "settings.env"
+    ]
+  }
+}
