@@ -13,7 +13,7 @@ Keep in mind you need Pulseaudio and a WLED device with AR receive enabled.
 Again, simply run the executable with an `--uninstall` argument and delete the executable itself.
 
 ### Configuration
-By default, AudioSync will broadcast to every device on the network on port 11988. There is a settings.env file in the same directory as the executable in case you need to change something.
+By default, AudioSync will broadcast to every device on the network on port 11988. There is an env file at ~/.audiosync.env.
 | Option          | Default | Description                                                                                                                                                                                                            |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WLED_IP_ADDRESS | 0.0.0.0 | The IP of your WLED device. Ignored if broadcast is turned on.                                                                                                                                                         |
