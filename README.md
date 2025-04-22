@@ -29,16 +29,16 @@ By default, AudioSync will broadcast to every device on the network on port 1198
 
   That being said, it's easier to just use Pulseaudio and let the app figure everything out on its own. Your distro probably already has a Pulseaudio plugin installed alongside the primary audio server.
 
-- **Q:** What is the point of this project, considering there's lots of other FOSS options available?
+- **Q:** What is the point of this project, considering there's lots of other FOSS options available? \
   **A:** I do acknowledge that there's more options available, however not all work equally. [WLED SR Server](https://github.com/Victoare/SR-WLED-audio-server-win), which has a neat UI, is limited to Windows. Another option being [feed_my_wled](https://github.com/chrisgott/feed_my_wled), which is almost identical to my project (omitting the automatic setup), works on Linux and Mac, albeit I had lots of trouble setting it up, from a 1 second delay in sound to all FFT values being at 100% when nothing was playing. There's a myriad of other options (including [LedFX](https://github.com/ledfx/ledfx), [xLights](https://github.com/xLightsSequencer/xLights), etc.) however they all have their quirks. By no means do I say that my software is the best, since that can be disproven really fast. (Almost as fast as the time to set audiosync up 😎)
 
 
-- **Issue:** "Play something first" even though I'm already playing sound.
+- **Issue:** "Play something first" even though I'm already playing sound. \
   **A:** This is because audiosync can't detect a monitor marked "RUNNING" by Pulseaudio. Keep playing any sound and run this command in a terminal: `pactl list short sources`. If you can't find a single line which says "RUNNING", Pulseaudio itself is the issue. You might have to manually set up the FIFO file with the commands described in question 1.
 
 
-- **Issue:** Audiosync says it's streaming / broadcasting, however nothing is showing up on my WLED device(s).
+- **Issue:** Audiosync says it's streaming / broadcasting, however nothing is showing up on my WLED device(s). \
   **A:** Make sure you have AudioReactive receiving enabled and that you're playing an AudioReactive effect. AR effects have a single or double note next to their name. To enable AR receiving, follow these steps: ![Enable AR receiving](https://raw.githubusercontent.com/DvidPiDev/WLED-AudioSync/refs/heads/main/assets/enable_receive.jpg)
 
-- **Issue:** Broadcasting causes one device to be in sync and the rest to be about 1 second behind.
+- **Issue:** Broadcasting causes one device to be in sync and the rest to be about 1 second behind. \
   **A:** I'm aware of this issue and have no quick fix for this available yet. 
